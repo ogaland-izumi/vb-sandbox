@@ -29,7 +29,7 @@ Partial Class MainForm
         '
         'yellowPanel
         '
-        Me.yellowPanel.BackColor = System.Drawing.Color.White
+        Me.yellowPanel.BackColor = System.Drawing.Color.Yellow
         Me.yellowPanel.Location = New System.Drawing.Point(225, 79)
         Me.yellowPanel.Name = "yellowPanel"
         Me.yellowPanel.Size = New System.Drawing.Size(127, 116)

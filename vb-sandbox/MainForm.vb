@@ -1,4 +1,4 @@
-﻿''' <summary>
+''' <summary>
 ''' 
 ''' </summary>
 Public Class MainForm
@@ -10,6 +10,8 @@ Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         redPanel.BackColor = Color.Red
+        yellowPanel.BackColor = Color.Yellow
 
     End Sub
+  
 End Class
