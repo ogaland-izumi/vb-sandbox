@@ -11,6 +11,7 @@ Public Class MainForm
 
         redPanel.BackColor = Color.Red
         yellowPanel.BackColor = Color.Yellow
+        bluePanel.BackColor = Color.Blue
 
     End Sub
   
