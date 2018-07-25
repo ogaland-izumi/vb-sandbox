@@ -37,7 +37,7 @@ Partial Class MainForm
         '
         'redPanel
         '
-        Me.redPanel.BackColor = System.Drawing.Color.White
+        Me.redPanel.BackColor = System.Drawing.Color.Red
         Me.redPanel.Location = New System.Drawing.Point(38, 79)
         Me.redPanel.Name = "redPanel"
         Me.redPanel.Size = New System.Drawing.Size(127, 116)
