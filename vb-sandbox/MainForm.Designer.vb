@@ -29,7 +29,7 @@ Partial Class MainForm
         '
         'yellowPanel
         '
-        Me.yellowPanel.BackColor = System.Drawing.Color.White
+        Me.yellowPanel.BackColor = System.Drawing.Color.Yellow
         Me.yellowPanel.Location = New System.Drawing.Point(225, 79)
         Me.yellowPanel.Name = "yellowPanel"
         Me.yellowPanel.Size = New System.Drawing.Size(127, 116)
@@ -37,7 +37,7 @@ Partial Class MainForm
         '
         'redPanel
         '
-        Me.redPanel.BackColor = System.Drawing.Color.White
+        Me.redPanel.BackColor = System.Drawing.Color.Red
         Me.redPanel.Location = New System.Drawing.Point(38, 79)
         Me.redPanel.Name = "redPanel"
         Me.redPanel.Size = New System.Drawing.Size(127, 116)
@@ -45,7 +45,7 @@ Partial Class MainForm
         '
         'bluePanel
         '
-        Me.bluePanel.BackColor = System.Drawing.Color.White
+        Me.bluePanel.BackColor = System.Drawing.Color.Blue
         Me.bluePanel.Location = New System.Drawing.Point(407, 79)
         Me.bluePanel.Name = "bluePanel"
         Me.bluePanel.Size = New System.Drawing.Size(127, 116)
