@@ -16,19 +16,20 @@ echo %BranchName%
 CLS
 
 git checkout %BranchName%
+git symbolic-ref --short HEAD
 
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo Åb ActiveBranch:%BranchName%
+@echo ÅbNoÅb ActiveBranch:%BranchName%
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo Åb0: Status
+@echo Åb0 Åb Status
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo Åb1: Update(Fetch)+(Merge)
+@echo Åb1 ÅbUpdate(Fetch)+(Merge)
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo Åb2: Commit(Add) + (Commit)
+@echo Åb2 ÅbCommit(Add) + (Commit)
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo Åb3: Push
+@echo Åb3 ÅbPush
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo ÅbQ: Quit(èIóπ)
+@echo ÅbQ ÅbQuit(èIóπ)
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
 @echo ÅbÅ@Å@Å@Å@Å@Å@Å@    Å@Å@Å°Å°
 @echo ÅbGit-ToolÅ@Å@Å@Å@Å@    Å°Å°     
@@ -36,7 +37,6 @@ git checkout %BranchName%
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
 @echo  Select-MenuID
 
-git symbolic-ref --short HEAD
 
 set /p input=
 if defined input set input=%input:"=%
