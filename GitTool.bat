@@ -1,5 +1,5 @@
 @echo off
-@echo Git-Tool
+rem chcp 65001
 
 IF "%1" == "" (
     @ECHO ÉuÉâÉìÉ`éwíËÇ™Ç†ÇËÇ‹ÇπÇÒ
@@ -15,27 +15,26 @@ echo %BranchName%
 
 CLS
 
+pause
+
 git checkout %BranchName%
 
-@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo Åb%BranchName%
-@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo ÅbNoÅb Menu
-@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo Åb 0Åb Status
-@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo Åb 1Åb Update(Fetch)+(Merge)
-@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo Åb 2Åb Commit(Add) + (Commit)
-@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo Åb QÅb Quit(èIóπ)
-@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo ÅbÅ@Å@Å@Å@Å@Å@Å@    Å@Å@Å°Å°
-@echo ÅbGit-ToolÅ@Å@Å@Å@Å@    Å°Å°     
-@echo ÅbÅ@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@    Å°   ogaland
-@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo  ÉÅÉjÉÖÅ[NoÇì¸óÕÇµÇƒ [ENTER]Ç≈åàíË
+
+@echo ActiveBranch:%BranchName%
+@echo Å@
+@echo 0: Status
+@echo 1: Update(Fetch)+(Merge)
+@echo 2: Commit(Add) + (Commit)
+@echo Q: Quit(èIóπ)
+rem @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
+rem @echo ÅbÅ@Å@Å@Å@Å@Å@Å@    Å@Å@Å°Å°
+rem @echo ÅbGit-ToolÅ@Å@Å@Å@Å@    Å°Å°     
+rem @echo ÅbÅ@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@    Å°   ogaland
+rem @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
+@echo  Select-MenuID
+
 git symbolic-ref --short HEAD
+
 
 set /p input=
 if defined input set input=%input:"=%
@@ -67,19 +66,42 @@ git merge develop
 
 pause
 
-goto MainMenu
+GOTO MainMenu
+rem /////////////////////////////////////////////
 
 :Commit_1
+CLS
+@echo  ÉRÉ~ÉbÉgÉÅÉbÉZÅ[ÉWÇì¸óÕå„ [ENTER]Ç≈åàíË
+
+set /p input=
+if defined input set input=%input:"=%
+if /i "%input%" == "" (goto Commit_Error)
+
+set commitMessage=%input%
+
+git add -A
+git commit -m "%commitMessage%"
+
+git status
+
+pause
+
+GOTO MainMenu
+rem /////////////////////////////////////////////
+
+:Commit_Error
 
 
 
-
-
-goto MainMenu
-
-GOTO END_X
+GOTO MainMenu
+rem /////////////////////////////////////////////
 
 :ErrTrap
+
+
+GOTO MainMenu
+rem /////////////////////////////////////////////
+
 
 
 :END_X
