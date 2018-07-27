@@ -17,8 +17,6 @@ CLS
 git checkout %BranchName%
 git symbolic-ref --short HEAD
 
-pause
-
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
 @echo ÅbNoÅb ActiveBranch:%BranchName%
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
@@ -26,9 +24,11 @@ pause
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
 @echo Åb1 ÅbUpdate(Fetch)+(Merge)
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo Åb2 ÅbCommit(Add) + (Commit)
+@echo Åb2 ÅbCommit(Add) + (Commit) 
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
 @echo Åb3 ÅbPush
+@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
+@echo Åb9 ÅbCommit(Add) + (Commit) (CRLF)
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
 @echo ÅbQ ÅbQuit(èIóπ)
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
@@ -45,6 +45,7 @@ if /i "%input%" == "0" (goto Status_1)
 if /i "%input%" == "1" (goto Update_1)
 if /i "%input%" == "2" (goto Commit_1)
 if /i "%input%" == "3" (goto Push_1)
+if /i "%input%" == "9" (goto Commit_2)
 if /i "%input%" == "Q" (goto END_X)
 if /i "%input%" == "q" (goto END_X)
 
@@ -55,6 +56,8 @@ goto MainMenu
 git checkout %BranchName%
 git status
 
+pause
+
 goto MainMenu
 
 :Update_1
@@ -62,6 +65,8 @@ goto MainMenu
 git checkout develop
 git fetch
 git merge
+
+pause
 
 git checkout %BranchName%
 git merge develop
@@ -81,6 +86,7 @@ if /i "%input%" == "" (goto Commit_Error)
 
 set commitMessage=%input%
 
+git config --local core.autocrlf input
 git add -A
 git commit -m "%commitMessage%"
 
@@ -90,6 +96,30 @@ pause
 
 GOTO MainMenu
 rem /////////////////////////////////////////////
+
+:Commit_2
+CLS
+@echo  CRLFóLå¯ÉÇÅ[ÉhÇ≈ÉRÉ~ÉbÉgÇµÇ‹Ç∑
+@echo  ÉRÉ~ÉbÉgÉÅÉbÉZÅ[ÉWÇì¸óÕå„ [ENTER]Ç≈åàíË
+
+set /p input=
+if defined input set input=%input:"=%
+if /i "%input%" == "" (goto Commit_Error)
+
+set commitMessage=%input%
+
+git config --local core.autocrlf false
+git add -A
+git commit -m "%commitMessage%"
+git config --local core.autocrlf input
+
+git status
+
+pause
+
+GOTO MainMenu
+rem /////////////////////////////////////////////
+
 
 :Push_1
 
