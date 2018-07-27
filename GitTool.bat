@@ -17,8 +17,6 @@ CLS
 git checkout %BranchName%
 git symbolic-ref --short HEAD
 
-pause
-
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
 @echo ÅbNoÅb ActiveBranch:%BranchName%
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
