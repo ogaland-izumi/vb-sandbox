@@ -6,6 +6,7 @@ IF "%1" == "" (
     GOTO END_X
 )  
 
+SET LANG=ja_JP.UTF-8
 SET BranchName=%1
 
 echo %BranchName%
