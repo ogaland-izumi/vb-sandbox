@@ -3,7 +3,7 @@
 ''' </summary>
 Public Class MainForm
     ''' <summary>
-    ''' 
+    ''' フォームロードイベント
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
