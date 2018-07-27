@@ -15,32 +15,35 @@ echo %BranchName%
 
 CLS
 
-pause
-
 git checkout %BranchName%
 
-
-@echo ActiveBranch:%BranchName%
-@echo Å@
-@echo 0: Status
-@echo 1: Update(Fetch)+(Merge)
-@echo 2: Commit(Add) + (Commit)
-@echo Q: Quit(èIóπ)
-rem @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-rem @echo ÅbÅ@Å@Å@Å@Å@Å@Å@    Å@Å@Å°Å°
-rem @echo ÅbGit-ToolÅ@Å@Å@Å@Å@    Å°Å°     
-rem @echo ÅbÅ@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@    Å°   ogaland
-rem @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
+@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
+@echo Åb ActiveBranch:%BranchName%
+@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
+@echo Åb0: Status
+@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
+@echo Åb1: Update(Fetch)+(Merge)
+@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
+@echo Åb2: Commit(Add) + (Commit)
+@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
+@echo Åb3: Push
+@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
+@echo ÅbQ: Quit(èIóπ)
+@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
+@echo ÅbÅ@Å@Å@Å@Å@Å@Å@    Å@Å@Å°Å°
+@echo ÅbGit-ToolÅ@Å@Å@Å@Å@    Å°Å°     
+@echo ÅbÅ@Å@Å@Å@Å@Å@Å@Å@Å@Å@Å@    Å°   ogaland
+@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
 @echo  Select-MenuID
 
 git symbolic-ref --short HEAD
-
 
 set /p input=
 if defined input set input=%input:"=%
 if /i "%input%" == "0" (goto Status_1)
 if /i "%input%" == "1" (goto Update_1)
 if /i "%input%" == "2" (goto Commit_1)
+if /i "%input%" == "3" (goto Push_1)
 if /i "%input%" == "Q" (goto END_X)
 if /i "%input%" == "q" (goto END_X)
 
@@ -89,11 +92,22 @@ pause
 GOTO MainMenu
 rem /////////////////////////////////////////////
 
-:Commit_Error
+:Push_1
 
+git push
 
+pause
 
 GOTO MainMenu
+rem /////////////////////////////////////////////
+
+:Commit_Error
+
+@echo  ÉRÉ~ÉbÉgÉÅÉbÉZÅ[ÉWÇì¸óÕÇµÇƒâ∫Ç≥Ç¢ÅB
+pause
+
+GOTO MainMenu
+
 rem /////////////////////////////////////////////
 
 :ErrTrap
