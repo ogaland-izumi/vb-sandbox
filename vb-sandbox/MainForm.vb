@@ -1,9 +1,9 @@
-''' <summary>
+ï»¿''' <summary>
 ''' 
 ''' </summary>
 Public Class MainForm
     ''' <summary>
-    ''' ƒtƒH[ƒ€ƒ[ƒhƒCƒxƒ“ƒg
+    ''' ãƒ•ã‚©ãƒ¼ãƒ ãƒ­ãƒ¼ãƒ‰ã‚¤ãƒ™ãƒ³ãƒˆ
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
