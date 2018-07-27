@@ -62,6 +62,8 @@ goto MainMenu
 
 :Update_1
 
+pause
+
 git checkout develop
 git fetch
 git merge
@@ -75,7 +77,9 @@ GOTO MainMenu
 rem /////////////////////////////////////////////
 
 :Commit_1
+
 CLS
+
 @echo  コミットメッセージを入力後 [ENTER]で決定
 
 set /p input=
