@@ -1,5 +1,4 @@
 @echo off
-rem chcp 65001
 
 IF "%1" == "" (
     @ECHO ƒuƒ‰ƒ“ƒ`w’è‚ª‚ ‚è‚Ü‚¹‚ñ
@@ -18,6 +17,8 @@ CLS
 git checkout %BranchName%
 git symbolic-ref --short HEAD
 
+pause
+
 @echo  ||||||||||||||||||||
 @echo bNob ActiveBranch:%BranchName%
 @echo  ||||||||||||||||||||
@@ -35,7 +36,7 @@ git symbolic-ref --short HEAD
 @echo bGit-Tool@@@@@    ¡¡     
 @echo b@@@@@@@@@@@    ¡   ogaland
 @echo  ||||||||||||||||||||
-@echo  Select-MenuID
+@echo  ƒƒjƒ…[No‚ğ‘I‘ğ‚µ‚Ä‰º‚³‚¢B
 
 
 set /p input=
