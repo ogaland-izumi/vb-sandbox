@@ -56,6 +56,8 @@ goto MainMenu
 git checkout %BranchName%
 git status
 
+pause
+
 goto MainMenu
 
 :Update_1
