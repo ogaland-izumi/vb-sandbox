@@ -62,11 +62,11 @@ goto MainMenu
 
 :Update_1
 
-pause
-
 git checkout develop
 git fetch
 git merge
+
+pause
 
 git checkout %BranchName%
 git merge develop
@@ -77,9 +77,7 @@ GOTO MainMenu
 rem /////////////////////////////////////////////
 
 :Commit_1
-
 CLS
-
 @echo  コミットメッセージを入力後 [ENTER]で決定
 
 set /p input=
