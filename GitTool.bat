@@ -31,6 +31,8 @@ git symbolic-ref --short HEAD
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
 @echo Åb9 ÅbCommit(Add) + (Commit) (CRLF)
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
+@echo ÅbG ÅbGraph(tool --graph)
+@echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
 @echo ÅbQ ÅbQuit(èIóπ)
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
 @echo ÅbÅ@Å@Å@Å@Å@Å@Å@    Å@Å@Å°Å°
@@ -47,6 +49,8 @@ if /i "%input%" == "1" (goto Update_1)
 if /i "%input%" == "2" (goto Commit_1)
 if /i "%input%" == "3" (goto Push_1)
 if /i "%input%" == "9" (goto Commit_2)
+if /i "%input%" == "G" (goto GRAPH_X)
+if /i "%input%" == "g" (goto GRAPH_X)
 if /i "%input%" == "Q" (goto END_X)
 if /i "%input%" == "q" (goto END_X)
 
@@ -139,6 +143,15 @@ pause
 GOTO MainMenu
 
 rem /////////////////////////////////////////////
+:Graph_X
+
+git log --graph
+
+pause
+
+GOTO MainMenu
+rem /////////////////////////////////////////////
+
 
 :ErrTrap
 
