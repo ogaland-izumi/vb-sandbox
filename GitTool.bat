@@ -129,7 +129,7 @@ rem /////////////////////////////////////////////
 
 :Push_1
 
-git push
+git push origin %BranchName%:%BranchName%
 
 pause
 
