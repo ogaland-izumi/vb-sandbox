@@ -69,12 +69,13 @@ goto MainMenu
 
 git checkout develop
 git fetch
-git merge
+git merge origin
 
 pause
 
 git checkout %BranchName%
 git merge develop
+git merge origin
 
 pause
 
