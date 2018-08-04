@@ -6,19 +6,19 @@
 4
 5  VS-Code で編集
 6
-7
-8
+7 Edit by vi
+8 Modify H.Izumi
 9
 //*****************************************
 //**** ここは担当者Ｂの編集エリア *********
 0
 1
-2
-3
+2 oga
+3 ogaland
 4
-5
+5 kkkk(Modify)
 6
-7
+7 kkkkkk(Update)
 8
 9
 //*****************************************
@@ -26,11 +26,11 @@
 0
 1
 2
-3
-4
-5
-6
-7
+3 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+4 
+5    TEST-----
+6 ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+7 GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
 8
 9
 //*****************************************

@@ -69,12 +69,13 @@ goto MainMenu
 
 git checkout develop
 git fetch
-git merge
+git merge origin
 
 pause
 
 git checkout %BranchName%
 git merge develop
+git merge origin
 
 pause
 
@@ -128,7 +129,7 @@ rem /////////////////////////////////////////////
 
 :Push_1
 
-git push
+git push origin %BranchName%:%BranchName%
 
 pause
 
@@ -146,8 +147,6 @@ rem /////////////////////////////////////////////
 :Graph_X
 
 git log --graph
-
-pause
 
 GOTO MainMenu
 rem /////////////////////////////////////////////
