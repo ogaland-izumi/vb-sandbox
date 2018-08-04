@@ -31,7 +31,7 @@ git symbolic-ref --short HEAD
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
 @echo Åb9 ÅbCommit(Add) + (Commit) (CRLF)
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
-@echo ÅbG ÅbGraph(tool --graph)
+@echo ÅbG ÅbGraph(log --graph)
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
 @echo ÅbQ ÅbQuit(èIóπ)
 @echo  Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|Å|
